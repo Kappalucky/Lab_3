@@ -56,10 +56,10 @@ public class Book {
 	public String toString()
 	{
 		String description = "";
-		description += "Title: \t" + title + "\n";
-		description += "Author: \t" + author + "\n";
-		description += "Publisher: \t" + publisher + "\n";
-		description += "Copyright Date: \t" + crdate + "\n";
+		description += "Title: " + title + "\n";
+		description += "Author: " + author + "\n";
+		description += "Publisher: " + publisher + "\n";
+		description += "Copyright Date: " + crdate + "\n";
 		return description;
 	}
 }

@@ -1,25 +1,28 @@
-import java.awt.print.Book;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class LinearSearchLimitedLibrary {
+	
 	static void linearSearch(String target, ArrayList<Book> a)
 	{
-		for (int i = 0; i < a.length; i++)
+		for (int i = 0; i < a.size(); i++)
 			{
-				if (target.equals(a.get[i].getTitle()))
+				if (target.equals(a.get(i).getTitle()))
 				{
-					System.out.println(a.get[i].getTitle());
+					System.out.println(a.get(i).toString());
+					break; //Stop loop if found
 				}
-                else
-                {
+				/*else if (!target.equals(a.get(i)));
+				{
                     System.out.println("Not Found");
-                }
+                }*/
 			}
 	}
 
 	public static void main(String[] args) {
-
+		
+		//Case-sensitive search at the moment
+		
 		ArrayList<Book> smallLibrary = new ArrayList<Book>();
 		Book a1 = new Book("Feed", "M.T. Anderson", "Candlewick Press", 2002);
 		Book a2 = new Book("Wizard of OZ", "L. Frank Baum", "George M. Hill Company", 1900);
@@ -45,23 +48,12 @@ public class LinearSearchLimitedLibrary {
 		@SuppressWarnings("resource")
 		Scanner Keyboard = new Scanner(System.in);
 		
-		boolean found = false;
-		while (!found)
-		{
-		System.out.print("Enter name, author, publisher, or year of book, enter 'quit' to quit:" );
+		System.out.print("Enter name, author, publisher, or year of book, enter 'quit' to quit: " );
 		String s= Keyboard.nextLine();
+			if (s.equalsIgnoreCase("quit")) //"Quit isn't case-sensitive...Quit anyway you like.
+			{
+				System.exit(-1);
+			}
 		linearSearch(s, smallLibrary);
-		if (s.equals(smallLibrary(i)))
-		{
-			found = true;
-			System.out.println(smallLibrary.get(s).toString());
-		}
-		else
-		{
-			System.exit(0);
-		}
-
-
-	}
 	}
 }
