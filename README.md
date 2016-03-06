@@ -1,5 +1,3 @@
-# hello-world
+# Lab_3
 
-*/Wassup/*
-
-just testing out the structure
+Contains Linear Searching and multiple sorting projects for CUS 1126
