@@ -54,6 +54,9 @@ public class LinearSearchLimitedLibrary {
 			{
 				System.exit(-1);
 			}
+			
+		System.out.println("Searching for: " + s);
+		System.out.println();
 		linearSearch(s, smallLibrary);
 	}
 }

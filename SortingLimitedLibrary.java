@@ -54,6 +54,7 @@ public class SortingLimitedLibrary {
 			{
 				System.exit(-1);
 			}
+
 		linearSearch(s, smallLibrary);
 	}
 }
